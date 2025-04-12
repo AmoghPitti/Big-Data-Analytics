@@ -1,0 +1,139 @@
+CREATE DATABASE HealthAnalytics;
+CREATE SCHEMA DataStructure;
+CREATE TABLE patient_demographics (
+    patient_id INT,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    birth_date DATE,
+    gender VARCHAR(10),
+    address VARCHAR(100),
+    city VARCHAR(50),
+    state VARCHAR(20),
+    zip_code VARCHAR(10)
+);
+CREATE TABLE clinical_data (
+    patient_id INT,
+    encounter_date DATE,
+    diagnosis_code VARCHAR(20),
+    procedure_code VARCHAR(20),
+    medication_code VARCHAR(20),
+    physician_id INT
+);
+INSERT INTO patient_demographics (patient_id, first_name, last_name, birth_date, gender, address, city, state, zip_code)
+VALUES
+    (1, 'John', 'Doe', '1980-05-25', 'Male', '123 Main St', 'Anytown', 'NY', '12345'),
+    (2, 'Jane', 'Smith', '1975-08-12', 'Female', '456 Elm St', 'Anycity', 'CA', '67890'),
+    (3, 'Michael', 'Johnson', '1990-03-15', 'Male', '789 Maple Ave', 'Anothercity', 'TX', '56789'),
+    (4, 'Emily', 'Brown', '1985-11-20', 'Female', '321 Oak St', 'Yetanothercity', 'FL', '98765'),
+    (5, 'Liam', 'White', '1982-07-14', 'Male', '400 Oak St', 'Smalltown', 'OR', '12312'),
+    (6, 'Emma', 'Green', '1991-04-22', 'Female', '421 Palm St', 'Lakecity', 'TX', '45454'),
+    (7, 'Noah', 'Black', '1984-01-02', 'Male', '786 Pine Ave', 'Hilltown', 'IL', '65478'),
+    (8, 'Ava', 'Davis', '1992-09-17', 'Female', '122 Spruce Dr', 'Seaside', 'NY', '21345'),
+    (9, 'James', 'Moore', '1980-03-09', 'Male', '967 Birch St', 'Rivercity', 'LA', '98321'),
+    (10, 'Mia', 'Taylor', '1993-12-04', 'Female', '342 Elm Dr', 'Forestville', 'CO', '85732'),
+    (11, 'Elijah', 'Anderson', '1977-11-30', 'Male', '557 Cedar Ave', 'Metrocity', 'CA', '93456'),
+    (12, 'Isabella', 'Thomas', '1990-05-13', 'Female', '765 Oak Blvd', 'Villagetown', 'FL', '76345'),
+    (13, 'Lucas', 'Jackson', '1986-02-21', 'Male', '983 Maple Dr', 'Parkcity', 'WI', '54321'),
+    (14, 'Charlotte', 'Harris', '1983-06-28', 'Female', '200 Willow Ln', 'Brooktown', 'MO', '67543'),
+    (15, 'Benjamin', 'Lee', '1987-07-11', 'Male', '101 Maple St', 'Greenville', 'NV', '34678'),
+    (16, 'Amelia', 'King', '1995-03-08', 'Female', '421 Oak St', 'Sunnytown', 'MT', '45873'),
+    (17, 'Oliver', 'Hill', '1976-04-26', 'Male', '823 Pine St', 'Cloudcity', 'AL', '65423'),
+    (18, 'Sophia', 'Scott', '1991-11-07', 'Female', '756 Birch Ave', 'Raintown', 'GA', '31245'),
+    (19, 'Ethan', 'Adams', '1988-02-14', 'Male', '234 Maple Blvd', 'Snowcity', 'TN', '76543'),
+    (20, 'Mason', 'Baker', '1985-10-19', 'Male', '543 Oak Ln', 'Wheatville', 'OK', '67543'),
+    (21, 'Harper', 'Gonzalez', '1993-01-03', 'Female', '233 Cedar St', 'Valleytown', 'AZ', '67521'),
+    (22, 'Alexander', 'Young', '1990-06-22', 'Male', '782 Pine St', 'Riverstone', 'AR', '54323'),
+    (23, 'Aiden', 'Mitchell', '1994-05-18', 'Male', '654 Birch Blvd', 'Mountaincity', 'KY', '23456'),
+    (24, 'Scarlett', 'Perez', '1981-07-31', 'Female', '111 Elm St', 'Sunsettown', 'SC', '56789'),
+    (25, 'Logan', 'Hall', '1979-12-12', 'Male', '333 Cedar Dr', 'Brighttown', 'IA', '54312');
+INSERT INTO clinical_data (patient_id, encounter_date, diagnosis_code, procedure_code, medication_code, physician_id)
+VALUES
+    (1, '2023-01-01', 'D123', 'P456', 'M001', 101),
+    (2, '2023-01-02', 'D234', 'P567', 'M002', 102),
+    (3, '2023-01-03', 'D345', 'P678', 'M003', 103),
+    (4, '2023-01-04', 'D456', 'P789', 'M004', 104),
+    (5, '2023-01-05', 'D567', 'P890', 'M005', 105),
+    (6, '2023-01-06', 'D678', 'P901', 'M006', 106),
+    (7, '2023-01-07', 'D789', 'P012', 'M007', 107),
+    (8, '2023-01-08', 'D890', 'P123', 'M008', 108),
+    (9, '2023-01-09', 'D901', 'P234', 'M009', 109),
+    (10, '2023-01-10', 'D012', 'P345', 'M010', 110),
+    (11, '2023-01-11', 'D123', 'P456', 'M011', 111),
+    (12, '2023-01-12', 'D234', 'P567', 'M012', 112),
+    (13, '2023-01-13', 'D345', 'P678', 'M013', 113),
+    (14, '2023-01-14', 'D456', 'P789', 'M014', 114),
+    (15, '2023-01-15', 'D567', 'P890', 'M015', 115),
+    (16, '2023-01-16', 'D678', 'P901', 'M016', 116),
+    (17, '2023-01-17', 'D789', 'P012', 'M017', 117),
+    (18, '2023-01-18', 'D890', 'P123', 'M018', 118),
+    (19, '2023-01-19', 'D901', 'P234', 'M019', 119),
+    (20, '2023-01-20', 'D012', 'P345', 'M020', 120),
+    (21, '2023-01-21', 'D123', 'P456', 'M021', 121),
+    (22, '2023-01-22', 'D234', 'P567', 'M022', 122),
+    (23, '2023-01-23', 'D345', 'P678', 'M023', 123),
+    (24, '2023-01-24', 'D456', 'P789', 'M024', 124),
+    (25, '2023-01-25', 'D567', 'P890', 'M025', 125);
+SELECT AVG(DATEDIFF(YEAR, birth_date, CURRENT_DATE())) AS avg_patient_age
+FROM patient_demographics;
+SELECT
+    gender,
+    AVG(DATEDIFF(YEAR, birth_date, CURRENT_DATE())) AS avg_age
+FROM
+    patient_demographics
+GROUP BY
+    gender;
+SELECT
+    diagnosis_code,
+    COUNT(*) AS encounter_count
+FROM
+    clinical_data
+GROUP BY
+    diagnosis_code
+ORDER BY
+    encounter_count DESC;
+SELECT
+    pd.patient_id,
+    pd.first_name,
+    pd.last_name,
+    pd.gender,
+    pd.birth_date,
+    cd.encounter_date,
+    cd.diagnosis_code,
+    cd.procedure_code,
+    cd.medication_code
+FROM
+    patient_demographics pd
+JOIN
+    clinical_data cd ON pd.patient_id = cd.patient_id
+ORDER BY
+    pd.patient_id, cd.encounter_date;
+WITH patient_encounter_stats AS (
+    SELECT
+        pd.patient_id,
+        pd.first_name,
+        pd.last_name,
+        pd.gender,
+        COUNT(*) AS total_encounters,
+        MAX(cd.encounter_date) AS latest_encounter_date,
+        MIN(cd.encounter_date) AS earliest_encounter_date,
+        AVG(DATEDIFF('day', cd.encounter_date, CURRENT_DATE())) AS avg_days_since_last_encounter
+    FROM
+        patient_demographics pd
+    JOIN
+        clinical_data cd ON pd.patient_id = cd.patient_id
+    GROUP BY
+        pd.patient_id, pd.first_name, pd.last_name, pd.gender
+)
+SELECT
+    patient_id,
+    first_name,
+    last_name,
+    gender,
+    total_encounters,
+    earliest_encounter_date,
+    latest_encounter_date,
+    avg_days_since_last_encounter
+FROM
+    patient_encounter_stats
+ORDER BY
+    total_encounters DESC;
