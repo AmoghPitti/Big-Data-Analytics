@@ -1,4 +1,3 @@
-
 # Snowflake for Healthcare Analytics
 
 Leveraging clinical and patient data using Snowflake to generate insights, improve decision-making, and enhance healthcare outcomes.
@@ -13,30 +12,9 @@ This project demonstrates the use of **Snowflake**, a cloud-based data warehouse
 
 ## 🛠️ Technologies Used
 
-- **Snowflake Data Cloud** – Data storage, processing, and analytics
+- **Snowflake Data Cloud (Free Trial)** – Data storage, processing, and analytics
 - **SQL** – Data querying and transformation
-- **Cloud Platform (AWS / Azure / GCP)** – Hosting the Snowflake instance
-- **Data Integration Tools** – For data ingestion (e.g., Talend / Fivetran / Informatica)
-- **BI Tools** – Visualization using Power BI / Tableau / Looker
 - **Snowpipe, Streams & Tasks** – For real-time and automated data workflows
-- **Python (Optional)** – For advanced analytics using Snowpark (if applicable)
-
----
-
-## 📂 Project Structure
-
-```
-snowflake-healthcare-analytics/
-├── scripts/
-│   ├── create_tables.sql
-│   ├── load_data.sql
-│   └── analytics_queries.sql
-├── dashboards/
-│   └── healthcare_insights_dashboard.png
-├── docs/
-│   └── project_report.pdf
-└── README.md
-```
 
 ---
 
@@ -62,9 +40,8 @@ snowflake-healthcare-analytics/
 ## 📬 Contact
 
 Created by **Amogh Pitti**  
-📧 Email: [your-email@example.com]  
-📞 Phone: [your-phone-number]  
-🔗 [LinkedIn / Portfolio Link] *(optional)*
+📧 Email: amoghpitti@gmail.com  
+📞 Phone: 7680900404
 
 ---
 
